@@ -66,9 +66,9 @@
                         <image>java:8</image>
                     </from>
                     <to>
-                        <image>${docker.image.name}:${docker.image.version}</image>
+                        <image>${docker.image.name}</image>
                         <tags>
-                            <tag>1.0.0</tag>
+                            <tag>${docker.image.version}</tag>
                         </tags>
                     </to>
                     <allowInsecureRegistries>true</allowInsecureRegistries>
