@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-demo
+  labels:
+    app: docker-demo
+spec:
+  
+  template:
+    metadata:
+      name: docker-demo
+      labels:
+        app: docker-demo
+    spec:
+      containers:
+        - name: docker-demo
+          image:
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: docker-demo
