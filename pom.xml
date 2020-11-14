@@ -18,6 +18,8 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jib-maven-plugin.version>2.6.0</jib-maven-plugin.version>
+        <docker.image.name>registry.cn-hangzhou.aliyuncs.com/fengwuxp/docker-demo</docker.image.name>
+        <docker.image.version>${project.version}</docker.image.version>
     </properties>
 
     <dependencies>
@@ -50,7 +52,7 @@
                         <enabled>true</enabled>
                     </layers>
                     <image>
-                        <name>docker.io/fenwuxp/${project.artifactId}:latest</name>
+                        <name>${docker.image.name}:${docker.image.version}</name>
                     </image>
                 </configuration>
             </plugin>
@@ -64,7 +66,7 @@
                         <image>java:8</image>
                     </from>
                     <to>
-                        <image>registry.cn-hangzhou.aliyuncs.com/fengwuxp/docker_hub/${project.artifactId}</image>
+                        <image>${docker.image.name}:${docker.image.version}</image>
                         <tags>
                             <tag>1.0.0</tag>
                         </tags>
