@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hello-node
-          image: hello-node:v1
+          image: registry.cn-hangzhou.aliyuncs.com/fengwuxp/hello-node:v1
           ports:
             - containerPort: 9090
       imagePullSecrets:
